@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
-import { getAuth, GoogleAuthProvider } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider, signInAnonymously } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -13,9 +13,9 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig)
-const analytics = getAnalytics(app)
+// const analytics = getAnalytics(app)
 
-const auth = getAuth(app)
-const provider = new GoogleAuthProvider()
+const auth = getAuth()
+const providerGoogle = new GoogleAuthProvider()
 
-export { auth, provider, analytics }
+export { auth, providerGoogle }
