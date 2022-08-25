@@ -1,13 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import type { NextPage } from 'next'
 import { css } from '@emotion/react'
-import { signInWithPopup } from 'firebase/auth'
+import { signInAnonymously, signInWithPopup } from 'firebase/auth'
 import { auth, providerGoogle } from 'lib/firebase'
 import Head from 'next/head'
 
 const SignIn: NextPage = () => {
-  const onClickLogin = () => {
+  const onClickLoginGoogle = () => {
     signInWithPopup(auth, providerGoogle)
+  }
+  const onClickLoginAnonymous = () => {
+    signInAnonymously(auth)
   }
   return (
     <div css={container}>
@@ -15,7 +18,10 @@ const SignIn: NextPage = () => {
         <title>ログイン | 画像検索App</title>
       </Head>
       <h1>ログインページ</h1>
-      <button onClick={onClickLogin}>ログインする</button>
+      <div css={loginBtn}>
+        <button onClick={onClickLoginGoogle}>Googleでログイン</button>
+        <button onClick={onClickLoginAnonymous}>ゲストログイン</button>
+      </div>
     </div>
   )
 }
@@ -36,9 +42,19 @@ const container = css`
   button {
     width: 200px;
     height: 40px;
-    line-height: 40px;
+    line-height: 38px;
     text-align: center;
     background-color: skyblue;
-    border-radius: 100vmax;
+    border-radius: 10px;
+    border: 1px solid #333;
+    font-weight: 700;
   }
+`
+
+const loginBtn = css`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
 `

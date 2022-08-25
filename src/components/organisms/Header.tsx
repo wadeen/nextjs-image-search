@@ -39,9 +39,9 @@ const header = css`
     font-weight: 900;
     letter-spacing: 0.05em;
     a {
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
       &:hover {
-        opacity: .8;
+        opacity: 0.8;
       }
     }
   }
