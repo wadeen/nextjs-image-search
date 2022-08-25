@@ -6,11 +6,17 @@ import { NextPage } from 'next'
 type Props = {
   inputValue: any
   setInputValue: any
+  getImages: any //👋
 }
 
-const InputArea: NextPage<Props> = ({ inputValue, setInputValue }) => {
+const InputArea: NextPage<Props> = ({
+  inputValue,
+  setInputValue,
+  getImages,
+}) => {
   const onClickSearch = () => {
-    setInputValue('')
+    // setInputValue('')
+    getImages()
   }
 
   return (
