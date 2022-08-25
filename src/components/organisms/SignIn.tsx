@@ -10,7 +10,7 @@ const SignIn: NextPage = () => {
     signInWithPopup(auth, providerGoogle)
   }
   return (
-    <div>
+    <div css={container}>
       <Head>
         <title>ログイン | 画像検索App</title>
       </Head>
@@ -23,8 +23,22 @@ const SignIn: NextPage = () => {
 export default SignIn
 
 const container = css`
-  background-color: antiquewhite;
   width: min(100%, 1100px);
   margin: 0 auto;
   padding: 0 20px;
+  text-align: center;
+  h1 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  button {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: skyblue;
+    border-radius: 100vmax;
+  }
 `

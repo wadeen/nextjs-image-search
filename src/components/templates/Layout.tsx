@@ -3,7 +3,7 @@ const Layout = ({ children }: any) => {
   return (
     <>
       <Header />
-      {children}
+      <main id="wrapper">{children}</main>
     </>
   )
 }
