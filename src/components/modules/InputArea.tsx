@@ -2,10 +2,11 @@
 import { css } from '@emotion/react'
 import React from 'react'
 import { NextPage } from 'next'
+import ButtonSearch from '../atoms/button/ButtonSearch'
 
 type Props = {
-  inputValue: any
-  setInputValue: any
+  inputValue: any //👋
+  setInputValue: any //👋
   getImages: any //👋
 }
 
@@ -29,9 +30,7 @@ const InputArea: NextPage<Props> = ({
         }
         value={inputValue}
       />
-      <button type="button" onClick={onClickSearch}>
-        検索
-      </button>
+      <ButtonSearch name={'検索'} onClick={onClickSearch} />
     </div>
   )
 }

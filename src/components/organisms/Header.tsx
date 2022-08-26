@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from 'lib/firebase'
 import { NextPage } from 'next'
-import LogOut from './LogOut'
+import LogOut from '../modules/LogOut'
 import Link from 'next/link'
 const Head: NextPage = () => {
   const [user] = useAuthState(auth)

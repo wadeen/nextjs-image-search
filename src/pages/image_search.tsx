@@ -1,8 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import InputArea from '@/components/modules/InputArea'
+import ResultsArea from '@/components/organisms/ResultsArea'
 import { css } from '@emotion/react'
 import axios from 'axios'
+import Head from 'next/head'
 import { useState } from 'react'
+import isLoading from 'react-firebase-hooks/auth'
 const ImageSearch = () => {
   const [inputValue, setInputValue] = useState('')
 
@@ -15,10 +18,15 @@ const ImageSearch = () => {
       .catch((err) => console.log(err))
   }
 
+  console.log(isLoading)
+
   return (
     <div css={container}>
+      <Head>
+        <title>検索フォーム | 画像検索App</title>
+      </Head>
       <h2>
-        画像検索アプリ{' '}
+        画像検索App
         <span>
           by
           <a href="https://unsplash.com/" target="_blank">
@@ -26,7 +34,12 @@ const ImageSearch = () => {
           </a>
         </span>
       </h2>
-      <InputArea inputValue={inputValue} setInputValue={setInputValue} getImages={getImages}/>
+      <InputArea
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        getImages={getImages}
+      />
+      <ResultsArea />
     </div>
   )
 }
@@ -42,6 +55,7 @@ const container = css`
     span {
       font-size: 20px;
       font-weight: 500;
+      margin-left: 15px;
     }
     a {
       color: blue;
