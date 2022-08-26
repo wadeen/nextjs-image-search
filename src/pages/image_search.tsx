@@ -4,7 +4,7 @@ import ResultsArea from '@/components/organisms/ResultsArea'
 import { css } from '@emotion/react'
 import axios from 'axios'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { UnsplashImages } from '../../types/UnsplashImages'
 const ImageSearch = () => {
   const [inputValue, setInputValue] = useState('')
@@ -31,7 +31,11 @@ const ImageSearch = () => {
         Search Photos
         <span>
           by
-          <a href="https://unsplash.com/" target="_blank">
+          <a
+            href="https://unsplash.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Unsplash
           </a>
         </span>

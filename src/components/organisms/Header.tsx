@@ -5,7 +5,7 @@ import { auth } from 'lib/firebase'
 import { NextPage } from 'next'
 import LogOut from '../modules/LogOut'
 import Link from 'next/link'
-const Head: NextPage = () => {
+const Header: NextPage = () => {
   const [user] = useAuthState(auth)
   return (
     <header css={header}>
@@ -21,7 +21,7 @@ const Head: NextPage = () => {
   )
 }
 
-export default Head
+export default Header
 
 const header = css`
   width: 100%;
