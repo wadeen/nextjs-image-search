@@ -1,5 +1,7 @@
 import Header from '@/components/organisms/Header'
-const Layout = ({ children }: any) => {
+
+import { ReactNode } from 'react'
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />

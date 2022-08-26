@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
-import { NextPage } from 'next'
 import { UnsplashImages } from '../../../types/UnsplashImages'
 import Link from 'next/link'
 

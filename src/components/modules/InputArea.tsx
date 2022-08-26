@@ -5,9 +5,9 @@ import { NextPage } from 'next'
 import ButtonSearch from '../atoms/button/ButtonSearch'
 
 type Props = {
-  inputValue: any //👋
-  setInputValue: any //👋
-  getImages: any //👋
+  inputValue: string
+  setInputValue: React.Dispatch<React.SetStateAction<string>>
+  getImages: () => void
 }
 
 const InputArea: NextPage<Props> = ({

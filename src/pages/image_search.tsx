@@ -14,7 +14,7 @@ const ImageSearch = () => {
   const getImages = () => {
     axios
       .get(
-        `https://api.unsplash.com/search/photos?query=${inputValue}&client_id=${process.env.NEXT_PUBLIC_UNSPLASH_KEY}`
+        `https://api.unsplash.com/search/photos?query=${inputValue}&per_page=30&client_id=${process.env.NEXT_PUBLIC_UNSPLASH_KEY}`
       )
       .then((res) => {
         setResultsImages(res.data.results)
@@ -28,7 +28,7 @@ const ImageSearch = () => {
         <title>検索フォーム | Search Photos</title>
       </Head>
       <h2>
-      Search Photos
+        Search Photos
         <span>
           by
           <a href="https://unsplash.com/" target="_blank">
