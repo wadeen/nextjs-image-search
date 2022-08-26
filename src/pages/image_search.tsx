@@ -5,20 +5,21 @@ import { css } from '@emotion/react'
 import axios from 'axios'
 import Head from 'next/head'
 import { useState } from 'react'
-import isLoading from 'react-firebase-hooks/auth'
 const ImageSearch = () => {
   const [inputValue, setInputValue] = useState('')
+
+  const [resultsImages, setResultsImages] = useState([])
 
   const getImages = () => {
     axios
       .get(
         `https://api.unsplash.com/search/photos?query=${inputValue}&client_id=${process.env.NEXT_PUBLIC_UNSPLASH_KEY}`
       )
-      .then((res) => console.log(res))
+      .then((res) => setResultsImages(res.data.results))
       .catch((err) => console.log(err))
   }
 
-  console.log(isLoading)
+  console.log(resultsImages)
 
   return (
     <div css={container}>
@@ -39,7 +40,7 @@ const ImageSearch = () => {
         setInputValue={setInputValue}
         getImages={getImages}
       />
-      <ResultsArea />
+      <ResultsArea resultsImages={resultsImages} />
     </div>
   )
 }

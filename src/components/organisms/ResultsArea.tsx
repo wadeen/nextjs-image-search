@@ -1,26 +1,21 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import { css } from '@emotion/react'
 
-const ResultsArea = () => {
+const ResultsArea = ({ resultsImages }: any) => {
   return (
     <ul css={container}>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
-      <li><img src="https://via.placeholder.com/400x300" alt="" /></li>
+      {resultsImages.map((image: any) => (
+        <li key={image.id}>
+          <img src={image.links.download} alt="" />
+        </li>
+      ))}
     </ul>
-  );
+  )
 }
 
-export default ResultsArea;
+export default ResultsArea
 
 const container = css`
-  background-color: tomato;
   margin: 80px 20px;
   display: flex;
   align-items: center;
@@ -33,4 +28,4 @@ const container = css`
       height: 100%;
     }
   }
-`;
+`

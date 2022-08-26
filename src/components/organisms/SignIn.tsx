@@ -6,9 +6,11 @@ import { auth, providerGoogle } from 'lib/firebase'
 import Head from 'next/head'
 
 const SignIn: NextPage = () => {
+  // Googleでログイン
   const onClickLoginGoogle = () => {
     signInWithPopup(auth, providerGoogle)
   }
+  // 匿名でログイン
   const onClickLoginAnonymous = () => {
     signInAnonymously(auth)
   }
