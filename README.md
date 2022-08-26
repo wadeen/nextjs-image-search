@@ -1,4 +1,4 @@
-# React で ToDo アプリの制作 🧑‍💻
+# Next.js で 画像検索 アプリの制作 🧑‍💻
 
 Next.js 学習中で、アウトプットのためにログイン機能付き画像検索アプリを制作しました。
 
@@ -33,4 +33,3 @@ Next.js 学習中で、アウトプットのためにログイン機能付き画
 ## 公開 URL
 
 https://nextjs-image-search-delta.vercel.app/
-
