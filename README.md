@@ -31,4 +31,4 @@ Next.js 学習中で、アウトプットのためにログイン機能付き画
 
 ## 公開 URL
 
-https://nextjs-image-search-delta.vercel.app/
+https://dev.wadeen.net/
