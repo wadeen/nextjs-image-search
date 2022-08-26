@@ -9,7 +9,7 @@ export type UnsplashImages = {
   height: number
   id: string
   liked_by_user: boolean
-  likes: 362
+  likes: number
   links: {
     self: string
     html: string
