@@ -1,12 +1,23 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
+import { NextPage } from 'next'
+import { UnsplashImages } from '../../../types/UnsplashImages'
+import Link from 'next/link'
 
-const ResultsArea = ({ resultsImages }: any) => {
+const ResultsArea = ({
+  resultsImages,
+}: {
+  resultsImages: UnsplashImages[]
+}) => {
   return (
     <ul css={container}>
-      {resultsImages.map((image: any) => (
+      {resultsImages.map((image: UnsplashImages) => (
         <li key={image.id}>
-          <img src={image.links.download} alt="" />
+          <Link href={image.links.html}>
+            <a>
+              <img src={image.links.download} alt="" />
+            </a>
+          </Link>
         </li>
       ))}
     </ul>
@@ -22,7 +33,7 @@ const container = css`
   flex-wrap: wrap;
   gap: 30px;
   li {
-    width: calc((100% - 60px) / 3);
+    width: calc((100% - 90px) / 4);
     img {
       width: 100%;
       height: 100%;

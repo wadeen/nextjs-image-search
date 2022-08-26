@@ -4,30 +4,31 @@ import ResultsArea from '@/components/organisms/ResultsArea'
 import { css } from '@emotion/react'
 import axios from 'axios'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { UnsplashImages } from '../../types/UnsplashImages'
 const ImageSearch = () => {
   const [inputValue, setInputValue] = useState('')
 
-  const [resultsImages, setResultsImages] = useState([])
+  const [resultsImages, setResultsImages] = useState<UnsplashImages[]>([])
 
   const getImages = () => {
     axios
       .get(
         `https://api.unsplash.com/search/photos?query=${inputValue}&client_id=${process.env.NEXT_PUBLIC_UNSPLASH_KEY}`
       )
-      .then((res) => setResultsImages(res.data.results))
+      .then((res) => {
+        setResultsImages(res.data.results)
+      })
       .catch((err) => console.log(err))
   }
-
-  console.log(resultsImages)
 
   return (
     <div css={container}>
       <Head>
-        <title>検索フォーム | 画像検索App</title>
+        <title>検索フォーム | Search Photos</title>
       </Head>
       <h2>
-        画像検索App
+      Search Photos
         <span>
           by
           <a href="https://unsplash.com/" target="_blank">

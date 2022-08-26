@@ -12,7 +12,7 @@ const Head: NextPage = () => {
       <div>
         <h1>
           <Link href="/">
-            <a>画像検索App</a>
+            <a>Search Photos</a>
           </Link>
         </h1>
         {user ? <LogOut /> : ''}
@@ -26,7 +26,9 @@ export default Head
 const header = css`
   width: 100%;
   height: 80px;
-  background-color: teal;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
   div {
     display: flex;
     align-items: center;
