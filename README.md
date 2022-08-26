@@ -16,8 +16,7 @@ Next.js 学習中で、アウトプットのためにログイン機能付き画
 ## 機能
 
 - Firebase Authentication でのログイン機能
-- [Unsplash](https://unsplash.com/) より API 取得
-- Todo タスク追加・削除
+- [Unsplash](https://unsplash.com/) より API 取得し画像を検索する機能
 
 **アプリイメージ 🙌**
 ![アプリイメージ](ImageSearch.png)
