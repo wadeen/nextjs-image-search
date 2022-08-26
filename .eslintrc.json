@@ -5,13 +5,13 @@
     "plugin:import/warnings"
   ],
   "rules": {
-    "import/order": [
-      "error",
-      {
-        "alphabetize": {
-          "order": "asc"
-        }
-      }
-    ]
+    // "import/order": [
+    //   "error",
+    //   {
+    //     "alphabetize": {
+    //       "order": "asc"
+    //     }
+    //   }
+    // ]
   }
 }
