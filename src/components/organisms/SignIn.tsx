@@ -17,7 +17,7 @@ const SignIn: NextPage = () => {
   return (
     <div css={container}>
       <Head>
-        <title>ログイン | 画像検索App</title>
+        <title>ログイン | Search Photos</title>
       </Head>
       <h1>ログインページ</h1>
       <div css={loginBtn}>
