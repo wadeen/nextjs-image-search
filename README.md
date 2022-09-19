@@ -31,4 +31,4 @@ Next.js 学習中で、アウトプットのためにログイン機能付き画
 
 ## 公開 URL
 
-https://dev.wadeen.net/
+https://nextjs-image-search-lvnw1iseo-wadeen.vercel.app/
