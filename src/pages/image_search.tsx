@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { mq } from '@/components/breakpoints'
 import InputArea from '@/components/modules/InputArea'
 import ResultsArea from '@/components/organisms/ResultsArea'
 import { css } from '@emotion/react'
@@ -58,10 +59,16 @@ const container = css`
     text-align: center;
     margin-bottom: 40px;
     font-weight: 700;
+    ${mq[1]} {
+      font-size: 2rem;
+    }
     span {
       font-size: 20px;
       font-weight: 500;
       margin-left: 15px;
+      ${mq[1]} {
+      font-size: 1.6rem;
+    }
     }
     a {
       color: blue;

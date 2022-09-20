@@ -2,6 +2,7 @@
 import { css } from '@emotion/react'
 import { UnsplashImages } from '../../../types/UnsplashImages'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const ResultsArea = ({
   resultsImages,
@@ -14,7 +15,7 @@ const ResultsArea = ({
         <li key={image.id}>
           <Link href={image.links.html}>
             <a>
-              <img src={image.links.download} alt="" />
+              <Image src={image.links.download} alt="" />
             </a>
           </Link>
         </li>

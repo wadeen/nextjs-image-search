@@ -4,6 +4,7 @@ import { css } from '@emotion/react'
 import { signInAnonymously, signInWithPopup } from 'firebase/auth'
 import { auth, providerGoogle } from 'lib/firebase'
 import Head from 'next/head'
+import { mq } from '../breakpoints'
 
 const SignIn: NextPage = () => {
   // Googleでログイン
@@ -40,6 +41,9 @@ const container = css`
     font-weight: 700;
     text-align: center;
     margin-bottom: 50px;
+    ${mq[1]} {
+      font-size: 2.8rem;
+    }
   }
   button {
     width: 200px;
@@ -50,6 +54,9 @@ const container = css`
     border-radius: 10px;
     border: 1px solid #333;
     font-weight: 700;
+    ${mq[1]} {
+      width: 180px;
+    }
   }
 `
 

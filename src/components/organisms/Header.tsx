@@ -5,6 +5,7 @@ import { auth } from 'lib/firebase'
 import { NextPage } from 'next'
 import LogOut from '../modules/LogOut'
 import Link from 'next/link'
+import { mq } from '../breakpoints'
 const Header: NextPage = () => {
   const [user] = useAuthState(auth)
   return (
@@ -29,6 +30,9 @@ const header = css`
   background-color: #333;
   color: #fff;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+  ${mq[1]} {
+    height: 60px;
+  }
   div {
     display: flex;
     align-items: center;
@@ -40,6 +44,9 @@ const header = css`
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: 0.05em;
+    ${mq[1]} {
+      font-size: 2rem;
+    }
     a {
       transition: opacity 0.3s ease;
       &:hover {

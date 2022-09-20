@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 import React from 'react'
 import { NextPage } from 'next'
 import ButtonSearch from '../atoms/button/ButtonSearch'
+import { mq } from '../breakpoints'
 
 type Props = {
   inputValue: string
@@ -42,6 +43,10 @@ const container = css`
   align-items: center;
   justify-content: center;
   column-gap: 15px;
+  ${mq[1]} {
+    column-gap: 5px;
+  }
+
   input {
     background-color: #fff;
     width: 250px;
@@ -57,5 +62,8 @@ const container = css`
     height: 35px;
     background-color: goldenrod;
     color: #fff;
+    ${mq[1]} {
+      white-space: nowrap;
+  }
   }
 `
