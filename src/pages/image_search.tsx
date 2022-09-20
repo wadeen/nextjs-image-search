@@ -67,8 +67,8 @@ const container = css`
       font-weight: 500;
       margin-left: 15px;
       ${mq[1]} {
-      font-size: 1.6rem;
-    }
+        font-size: 1.6rem;
+      }
     }
     a {
       color: blue;
