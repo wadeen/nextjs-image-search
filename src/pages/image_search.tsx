@@ -13,10 +13,11 @@ const ImageSearch = () => {
   const [resultsImages, setResultsImages] = useState<UnsplashImages[]>([])
 
   const getImages = () => {
-    console.log(encodeURIComponent(inputValue))
     axios
       .get(
-        `https://api.unsplash.com/search/photos?query=${encodeURIComponent(inputValue)}&per_page=30&client_id=${process.env.NEXT_PUBLIC_UNSPLASH_KEY}`
+        `https://api.unsplash.com/search/photos?query=${encodeURIComponent(
+          inputValue
+        )}&per_page=30&client_id=${process.env.NEXT_PUBLIC_UNSPLASH_KEY}`
       )
       .then((res) => {
         setResultsImages(res.data.results)
